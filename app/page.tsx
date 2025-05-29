@@ -30,7 +30,7 @@ export default function WeddingInvitation() {
 
           <div className="mb-8 px-4">
             <p className="text-[#FFF] drop-shadow-lg text-sm font-light italic">
-              "O AMOR É PACIENTE, É BONDOSO, NÃO INVEJA, NÃO SE VANGLORIA, NÃO SE ORGULHA."
+              &quot;O AMOR É PACIENTE, É BONDOSO, NÃO INVEJA, NÃO SE VANGLORIA, NÃO SE ORGULHA.&quot;
             </p>
             <p className="text-[#FFF] drop-shadow-lg text-xs mt-1">1 CORÍNTIOS 13:4</p>
           </div>
