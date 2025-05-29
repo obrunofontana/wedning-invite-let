@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { MapPin } from "lucide-react"
+import { useEffect } from "react"
 
 export default function WeddingInvitation() {
   const handleLocationClick = () => {
@@ -10,8 +11,20 @@ export default function WeddingInvitation() {
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, "_blank")
   }
 
+  useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty("--vh", `${vh}px`)
+    }
+
+    setVh()
+    window.addEventListener("resize", setVh)
+
+    return () => window.removeEventListener("resize", setVh)
+  }, [])
+
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-white">
+    <div className="relative w-full min-h-[calc(var(--vh,1vh)*100)] overflow-hidden bg-white">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
